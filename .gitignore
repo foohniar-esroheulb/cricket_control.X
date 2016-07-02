@@ -1,0 +1,5 @@
+/build/default/
+/dist/default/
+/debug
+/nbproject
+makefile
