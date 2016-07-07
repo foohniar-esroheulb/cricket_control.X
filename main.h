@@ -6,7 +6,8 @@ void high_int (void);
 void low_int (void);
 void timer0isr (void);
 void driveDisp (void);
-char bcdTo7seg(char value);
+char bcdTo7seg(char value, char comTerm, char side);
+char bitInvert (char invertIt, char side);
 
 
 
