@@ -16,9 +16,9 @@ char manipulate = 0x00;                                                         
 
 
 
-char bcdTo7seg(char value, char comTerm, char side)                            // accepts BCD value (the thing you want to look up), C or A for common terminal, L or R for alignment of segment A
+char bcdTo7seg(char value, char comTerm, char side)                             // accepts BCD value (the thing you want to look up), C or A for common terminal, L or R for alignment of segment A
 {
-    if((value >= 0)&&(value <=15))                                              // perform some checking to make sure we don't dive off the end of the array
+    if(value < 16)                                                              // perform some checking to make sure we don't dive off the end of the array
     {
         if (side == 'L')
         {
@@ -41,9 +41,9 @@ char bcdTo7seg(char value, char comTerm, char side)                            /
 
 char bitInvert (char invertIt, char comTerm)
 {
-    if(comTerm == 'A')                                                          // if the common terminal is anode the bits need to be inverted
+    if(comTerm == 'C')                                                          // if the common terminal is anode the bits need to be inverted
         return invertIt ^ 0xFF;
-    else if (comTerm =='C')
+    else if (comTerm =='A')
         return invertIt;                                                        // if not just return the bit combination as it is
     else
         return 0;                                                               // trap for unexpected common terminal request

@@ -17,31 +17,31 @@ void driveDisp (void)
     {
         case 0:
             LATD |= selectWkts;
-            numberBits.Byte = bcdTo7seg(7,'C','L');
+            numberBits.Byte = bcdTo7seg(7,'A','L');
             break;
         case 1:
             LATD |= selectOverU;
-            numberBits.Byte = bcdTo7seg(6,'C','L');
+            numberBits.Byte = bcdTo7seg(6,'A','L');
             break;
         case 2:
             LATD |= selectOverT;
-            numberBits.Byte = bcdTo7seg(5,'C','L');
+            numberBits.Byte = bcdTo7seg(5,'A','L');
             break;
         case 3:
             LATD |= selectScoreThs;
-            numberBits.Byte = bcdTo7seg(1,'C','L');
+            numberBits.Byte = bcdTo7seg(1,'A','L');
             break;
         case 4:
             LATD |= selectScoreHun;
-            numberBits.Byte = bcdTo7seg(2,'C','L');
+            numberBits.Byte = bcdTo7seg(2,'A','L');
             break;
         case 5:
             LATD |= selectScoreTen;
-            numberBits.Byte = bcdTo7seg(3,'C','L');
+            numberBits.Byte = bcdTo7seg(3,'A','L');
             break;
         case 6:
             LATD |= selectScoreUni;
-            numberBits.Byte = bcdTo7seg(4,'C','L');
+            numberBits.Byte = bcdTo7seg(4,'A','L');
             break;
         default:
             selCtr = 0;
